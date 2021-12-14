@@ -17,7 +17,10 @@ class ScaledDotProductAttention(nn.Module):
         :param h: Number of heads
         '''
         super(ScaledDotProductAttention, self).__init__()
+<<<<<<< HEAD
         # 初始化
+=======
+>>>>>>> e0fe3fae68091970407e82e5b907cbc423f25df2
         self.fc_q = nn.Linear(d_model, h * d_k)
         self.fc_k = nn.Linear(d_model, h * d_k)
         self.fc_v = nn.Linear(d_model, h * d_v)
@@ -31,12 +34,18 @@ class ScaledDotProductAttention(nn.Module):
         self.init_weights()
 
     def init_weights(self):
+<<<<<<< HEAD
         # 初始化权重矩阵，其值为正态分布
+=======
+>>>>>>> e0fe3fae68091970407e82e5b907cbc423f25df2
         nn.init.xavier_uniform_(self.fc_q.weight)
         nn.init.xavier_uniform_(self.fc_k.weight)
         nn.init.xavier_uniform_(self.fc_v.weight)
         nn.init.xavier_uniform_(self.fc_o.weight)
+<<<<<<< HEAD
         # 初始化偏差为 0
+=======
+>>>>>>> e0fe3fae68091970407e82e5b907cbc423f25df2
         nn.init.constant_(self.fc_q.bias, 0)
         nn.init.constant_(self.fc_k.bias, 0)
         nn.init.constant_(self.fc_v.bias, 0)
